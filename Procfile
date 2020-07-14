@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port 8080 target/*.war
+web: java -cp target/springdemo1-0.0.1-SNAPSHOT.jar com.frybitsinc.Application
