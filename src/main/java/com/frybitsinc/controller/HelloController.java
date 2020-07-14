@@ -30,7 +30,7 @@ public class HelloController {
 		
 		memInfo.put("id", "1");
 		memInfo.put("name", "스텔라");
-		memInfo.put("imageURL", "https://www.smallticket.com/file/down/eG-DXSagqWqEYNmt44nsD_8oMYzy-UMIicMcIiQydVI");
+		memInfo.put("imageURL", "https://www.test.com/file/down/test");
 		memInfo.put("isFamilyProfile", true);
 		memInfo.put("isAddInfo", false); 
 		memList.add(memInfo);
