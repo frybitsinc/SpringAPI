@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,15 +32,15 @@ public class HelloController {
 		memInfo.put("id", "1");
 		memInfo.put("name", "스텔라");
 		memInfo.put("imageURL", "https://www.smallticket.com/file/down/eG-DXSagqWqEYNmt44nsD_8oMYzy-UMIicMcIiQydVI");
-		memInfo.put("isFamilyProfile", true); // 가족프로필 여부
-		memInfo.put("isAddInfo", false); // 추가정보 입력필요 여부
+		memInfo.put("isFamilyProfile", true);
+		memInfo.put("isAddInfo", false); 
 		memList.add(memInfo);
 		
 		return genMap(200, "msg", "data", memList);
 	}
 	
 	@RequestMapping("/get/member/{member_id}")
-	public Map<String, Object> getMember(@RequestParam(name = "member_id", required = false) String memberId) throws Exception{
+	public Map<String, Object> getMember(@PathVariable("member_id") String memberId) throws Exception{
 		return genMap(200, memberId);
 	}
 	
