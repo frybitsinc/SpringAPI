@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.frybitsinc.Application
+web: java $JAVA_OPTS --port 8080 -cp target/classes:target/dependency/* com.frybitsinc.Application
