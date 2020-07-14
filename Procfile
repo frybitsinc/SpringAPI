@@ -1,1 +1,1 @@
-web: java -Dserver.port=8080 $JAVA_OPTS -cp target/classes:target/dependency/* com.frybitsinc.Application
+web: java -Dserver.port=$PORT $JAVA_OPTS -cp target/classes:target/dependency/* com.frybitsinc.Application
