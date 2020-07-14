@@ -43,6 +43,7 @@ public class HelloController {
 		return genMap(200, memberId);
 	}
 	
+	// HashMap
 	// Mapping 함수
 	public HashMap<String, Object> genMap(int status, String message) {
 		HashMap<String, Object> ret = new HashMap<>();
