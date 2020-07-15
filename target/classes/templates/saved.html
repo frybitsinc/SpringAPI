@@ -41,7 +41,7 @@
     <div class="mt-5">고른 메뉴: <strong th:text="${car.carModel.krName}"></strong></div>
     <div class="mt-5">추천 메뉴: <strong th:text="${T(com.frybitsinc.thymeleaf.model.MenuModel).pick(car.carModel)}"></strong></div>
     
-    <a th:href="@{/}" class="btn btn-primary mt-5">Go back</a>
+    <a th:href="@{/}" class="btn btn-primary mt-5">별론데요...(다시 고르기)</a>
 </div>
 
 </body>
