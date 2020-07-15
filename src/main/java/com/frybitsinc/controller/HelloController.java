@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.frybitsinc.thymeleaf.model.Car;
 
 @Controller
-@RequestMapping({ "/" })
-public class HelloController {
+@RequestMapping("/")
+public class HelloController{
 
     @GetMapping
     public String index(Model model) {
