@@ -17,13 +17,4 @@ public enum CarModel {
     
     public String getKrName() {return krName;}
     
-    /*
-    Rice, 
-    Soup,  
-    Snack,  
-    Noodle,  
-    Japanese, 
-    Anjoo,  
-    Chinese,   
-    Whatever,  */
 }
