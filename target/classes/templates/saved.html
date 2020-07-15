@@ -38,27 +38,11 @@
 </nav>
 
 <div class="container">
-    <form method="post" th:object="${car}" class="mt-5">
-    
-        <div class="form-group">
-            <label>메뉴를 고르세요...</label>
-            <div th:each="model : ${T(com.frybitsinc.thymeleaf.model.CarModel).values()}">
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" th:field="*{carModel}" th:value="${model.krName}" class="custom-control-input"></input>
-                    <label class="custom-control-label" th:for="${#ids.prev('carModel')}" th:text="${model.krName}">model</label>
-                </div>
-            </div>
-        </div>
-        
-        <button class="btn btn-primary" type="submit">JUMSIM.AI 의 추천...</button>
-    </form>
+    <div class="mt-5">Model: <strong th:text="${car.carModel}"></strong></div>
+    <div>Option: <strong th:text="${car.option}"></strong></div>
 
+    <a th:href="@{/}" class="btn btn-primary mt-5">Go back</a>
 </div>
-
-
-<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
 </body>
 </html>
