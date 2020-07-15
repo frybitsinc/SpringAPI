@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>점심 뭐먹지</title>
 
     <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
@@ -38,9 +38,9 @@
 </nav>
 
 <div class="container">
-    <div class="mt-5">Model: <strong th:text="${car.carModel}"></strong></div>
-    <div>Option: <strong th:text="${car.option}"></strong></div>
-
+    <div class="mt-5">고른 메뉴: <strong th:text="${car.carModel.krName}"></strong></div>
+    <div class="mt-5">추천 메뉴: <strong th:text="${T(com.frybitsinc.thymeleaf.model.MenuModel).pick(car.carModel)}"></strong></div>
+    
     <a th:href="@{/}" class="btn btn-primary mt-5">Go back</a>
 </div>
 

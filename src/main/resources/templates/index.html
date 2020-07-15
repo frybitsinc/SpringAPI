@@ -44,7 +44,7 @@
             <label>메뉴를 고르세요...</label>
             <div th:each="model : ${T(com.frybitsinc.thymeleaf.model.CarModel).values()}">
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" th:field="*{carModel}" th:value="${model.krName}" class="custom-control-input"></input>
+                    <input type="radio" th:field="*{carModel}" th:value="${model}" class="custom-control-input"></input>
                     <label class="custom-control-label" th:for="${#ids.prev('carModel')}" th:text="${model.krName}">model</label>
                 </div>
             </div>

@@ -2,6 +2,7 @@ package com.frybitsinc.thymeleaf.model;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.function.Function;
 
 public enum MenuModel {
@@ -24,9 +25,15 @@ public enum MenuModel {
     }
     
     public static String pick(String selected){
-    	int randomNum;
+    	// get menu list
     	List<String> menuList = MenuModel.valueOf(selected).list;
-    	String result = menuList[randomNum];
+    	// get random menu
+    	Random rand = new Random();
+    	String result = menuList.get(rand.nextInt(menuList.size()));
+    	// print result
+    	System.out.println("~~~~~~~~~~~~~~~~~~  RESULT  ~~~~~~~~~~~~~~~~");
+    	System.out.println(result);
+    	System.out.println("~~~~~~~~~~~~~~~~~~  RESULT  ~~~~~~~~~~~~~~~~");
         return result;
     }
 }
