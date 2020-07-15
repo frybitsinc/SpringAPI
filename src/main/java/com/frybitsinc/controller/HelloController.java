@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.frybitsinc.thymeleaf.model.Car;
-import com.frybitsinc.thymeleaf.model.CarModel;
-import com.frybitsinc.thymeleaf.model.MenuModel;
 
 @Controller
 @RequestMapping({ "/" })
