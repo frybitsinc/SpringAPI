@@ -10,7 +10,7 @@ import com.frybitsinc.thymeleaf.model.CarModel;
 import com.frybitsinc.thymeleaf.model.MenuModel;
 
 @Controller
-@RequestMapping({ "/", "/index" })
+@RequestMapping({ "/" })
 public class HelloController {
 
     @GetMapping
