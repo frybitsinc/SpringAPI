@@ -2,14 +2,14 @@ package com.frybitsinc.thymeleaf.model;
 
 public enum CarModel {
     
-    Rice("밥"),
-    Soup("국/탕"),
-    Snack("분식"),
-    Noodle("면"),
-    Japanese("일식"),
-    Tired("다 귀찮"),
-    Anjoo("야식/술안주"),
-    Chinese("중식");
+    MENU1("밥"),
+    MENU2("국/탕"),
+    MENU3("분식"),
+    MENU4("면"),
+    MENU5("일식"),
+    MENU6("다 귀찮"),
+    MENU7("야식/술안주"),
+    MENU8("중식");
     
     private String krName;
     
