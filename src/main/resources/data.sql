@@ -1,0 +1,14 @@
+insert into members values (101, "줄리", "-");
+insert into members values (102, "알렉스", "-");
+insert into members values (103, "조엘", "-");
+insert into members values (104, "신디", "-");
+insert into members values (105, "젠", "-");
+insert into members values (106, "하나", "-");
+insert into members values (107, "큐", "-");
+insert into members values (108, "이자벨", "-");
+insert into members values (109, "레이", "-");
+insert into members values (110, "리버", "-");
+insert into members values (111, "데니", "-");
+insert into members values (112, "저스틴", "-");
+insert into members values (113, "후니", "-");
+insert into members values (114, "아이린", "-");
