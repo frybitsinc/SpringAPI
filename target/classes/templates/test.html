@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>(주)스몰티켓 사내 구성원 성격유형 집계 시스템</title>
+
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">(주)스몰티켓 사내 구성원 성격유형 집계 시스템</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <form method="post" th:object="${car}" class="mt-5">
+    
+        <div class="form-group">
+            <label>누구신가요...</label>
+            <div class="form-group blu-margin">
+                <select class="form-control" id="dropOperator">
+                    <option value="0">---</option>
+                    <option th:each="model : ${T(com.frybitsinc.thymeleaf.model.MemberModel).values()}" th:value="${model}" th:text="${model.krName}"></option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label>어떤 성격유형인가요...</label>
+            <div class="form-group blu-margin">
+                <select class="form-control" id="dropOperator">
+                    <option value="0">---</option>
+                    <option th:each="model : ${T(com.frybitsinc.thymeleaf.model.PersonaModel).values()}" th:value="${model}" th:text="${model}"></option>
+                </select>
+            </div>
+        </div>
+        
+        <button class="btn btn-primary" type="submit">입력...</button>
+    </form>
+
+</div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
